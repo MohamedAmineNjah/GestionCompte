@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AfficherUserController">
+   <children>
+      <TableView fx:id="table" layoutX="8.0" layoutY="87.0" prefHeight="298.0" prefWidth="932.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="39.99997043609619" text="id" />
+          <TableColumn fx:id="collogin" prefWidth="86.39999008178711" text="Login" />
+            <TableColumn fx:id="colpassword" prefWidth="84.0" text="Password" />
+            <TableColumn fx:id="colrole" prefWidth="89.59999084472656" text="Role" />
+            <TableColumn fx:id="colnom" prefWidth="109.60003662109375" text="Nom" />
+            <TableColumn fx:id="colprenom" prefWidth="99.199951171875" text="Prénom" />
+            <TableColumn fx:id="colemail" prefWidth="148.79998779296875" text="Email" />
+            <TableColumn fx:id="coladresse" prefWidth="138.4000244140625" text="Adresse" />
+            <TableColumn fx:id="colimage" prefWidth="144.0" text="Image" />
+        </columns>
+      </TableView>
+      <Button fx:id="txtbuttonsup" layoutX="290.0" layoutY="440.0" mnemonicParsing="false" text="Supprimer" textFill="#fd0000">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="txtbuttonmod" layoutX="539.0" layoutY="438.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" text="Modifier" textFill="#22bf34">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="358.0" layoutY="22.0" text="Liste des utilisateurs" textFill="#008fff">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="57.0" prefHeight="335.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="365.0" fitWidth="618.0" layoutY="29.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../wamp6/www/image/images%20(3).jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="59.0" fitWidth="64.0" layoutX="528.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../wamp6/www/image/Logout-512.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="-5.0" prefHeight="93.0" prefWidth="618.0" style="-fx-background-color: #20B2AA;">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/74325490_2895931740431458_4796052420230643712_n.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="213.0" layoutY="21.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="263.0" style="-fx-background-color: #a893c2;" text="Nom Rubrique" textFill="#f2f2f2" wrapText="true">
+               <font>
+                  <Font name="Baskerville Old Face" size="30.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="59.0" fitWidth="70.0" layoutX="533.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../wamp6/www/image/white-shopping-cart-md.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="35.0" layoutX="213.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../wamp6/www/image/IMage/50199804-icono-inicio-blanco-blanco-en-el-negro.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="94.0" fitWidth="117.0" layoutX="90.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../wamp6/www/image/Capturefinal.PNG" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
