@@ -14,10 +14,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -45,11 +49,17 @@ public class LoginController implements Initializable {
 
     @FXML
     private Button btnSignin;
+    @FXML
+    private Button btnSignup;
 
     /// -- 
     Connection con = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
+    @FXML
+    private Label btnForgot;
+    @FXML
+    private Button btnFB;
 
     @FXML
     public void handleButtonAction(MouseEvent event) {
@@ -79,17 +89,15 @@ public class LoginController implements Initializable {
                         if (resultSet.next()) {
                             String role = resultSet.getString(1);
                             if (role.equals("admin")) {
-                                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("AjouterUser.fxml")));
+                                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("Accueil1.fxml")));
                                 stage.setScene(scene);
                                 stage.show();
-                            }
-                            else if (role.equals("freelancer")) {
-                                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("modifier.fxml")));
+                            } else if (role.equals("freelancer")) {
+                                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("Accueil1_1.fxml")));
                                 stage.setScene(scene);
                                 stage.show();
-                            }
-                            else if (role.equals("startup")) {
-                                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("AfficherUser.fxml")));
+                            } else if (role.equals("startup")) {
+                                Scene scene = new Scene(FXMLLoader.load(getClass().getResource("Accueil1_2.fxml")));
                                 stage.setScene(scene);
                                 stage.show();
                             }
@@ -119,7 +127,7 @@ public class LoginController implements Initializable {
             lblErrors.setTextFill(Color.GREEN);
             lblErrors.setText("Server is up : Good to go");
         }
-
+       
     }
 
     private String logIn() {
@@ -162,5 +170,17 @@ public class LoginController implements Initializable {
         lblErrors.setTextFill(color);
         lblErrors.setText(text);
         System.out.println(text);
+    }
+
+    @FXML
+    private void signup(ActionEvent event) throws IOException {
+         Parent tableViewParent = FXMLLoader.load(getClass().getResource("AjouterUser_1.fxml"));
+            Scene tableViewScene = new Scene(tableViewParent);
+
+            //This line gets the Stage information
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            window.setScene(tableViewScene);
+            window.show();
     }
 }

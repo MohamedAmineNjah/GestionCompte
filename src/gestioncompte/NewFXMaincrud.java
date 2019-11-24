@@ -30,7 +30,7 @@ public class NewFXMaincrud extends Application {
         
         Scene scene = new Scene(root);
         
-        primaryStage.setTitle("Ajout d'un utilisateur");
+        primaryStage.setTitle("Welcome Smart Start");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

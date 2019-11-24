@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="imageview" prefHeight="386.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AjouterController">
+   <children>
+      <ImageView fitHeight="402.0" fitWidth="687.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/received_545184012913512.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnajouter" layoutX="408.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="AJOUTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text layoutX="81.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="contrat :" wrappingWidth="59.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="81.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="lieu :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="74.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="remuneration :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="competence :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="79.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="part_time :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtcontrat" layoutX="195.0" layoutY="83.0" />
+      <TextField fx:id="txtlieu" layoutX="195.0" layoutY="125.0" />
+      <TextField fx:id="txtremuneration" layoutX="195.0" layoutY="168.0" />
+      <TextField fx:id="txtcompetence" layoutX="195.0" layoutY="215.0" />
+      <TextField fx:id="txtparttime" layoutX="195.0" layoutY="262.0" />
+      <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="373.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/images%20(2).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="morebtn" layoutX="551.0" layoutY="313.0" mnemonicParsing="false" onAction="#morebtn" prefHeight="30.0" prefWidth="92.0" text="MORE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="retbtn" layoutX="26.0" layoutY="28.0" mnemonicParsing="false" onAction="#retbtn" prefHeight="26.0" prefWidth="82.0" text="Retour">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

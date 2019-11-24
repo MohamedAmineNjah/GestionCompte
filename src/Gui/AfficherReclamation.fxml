@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AfficherReclamationController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="641.0" prefWidth="1257.0">
+         <children>
+            <ImageView fitHeight="588.0" fitWidth="1118.0" layoutX="210.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/q0FnMwInbO.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="table" layoutX="277.0" layoutY="167.0" prefHeight="298.0" prefWidth="798.0">
+               <columns>
+                  <TableColumn fx:id="colid" prefWidth="93.60000610351562" text="id" />
+                  <TableColumn fx:id="collogin" prefWidth="206.39999389648438" text="Sujet" />
+                  <TableColumn fx:id="colpassword" prefWidth="331.20001220703125" text="Text" />
+                  <TableColumn fx:id="colrole" prefWidth="166.4000244140625" text="Phone" />
+               </columns>
+            </TableView>
+            <Label layoutX="656.0" layoutY="126.0" text="Liste des reclamations" textFill="#008fff">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Button layoutX="1128.0" layoutY="601.0" mnemonicParsing="false" onAction="#retour" prefHeight="36.0" prefWidth="114.0" stylesheets="@../styling/fullpackstyling.css" text="Retour">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconfinder_back_49408.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="txtbuttonmod" layoutX="708.0" layoutY="492.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="114.0" stylesheets="@../styling/fullpackstyling.css" text="Modifier" textFill="#45c258">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="txtbuttonsup" layoutX="419.0" layoutY="492.0" mnemonicParsing="false" onAction="#supprime" prefHeight="36.0" prefWidth="142.0" stylesheets="@../styling/fullpackstyling.css" text="Supprimer" textFill="RED">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/delete_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="947.0" layoutY="492.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="36.0" prefWidth="114.0" stylesheets="@../styling/fullpackstyling.css" text="Ajouter" textFill="#45c258" />
+            <ImageView fitHeight="98.0" fitWidth="26.0" layoutX="954.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/53327.png" />
+               </image>
+            </ImageView>
+            <VBox layoutY="-4.0" prefHeight="654.0" prefWidth="215.0" style="-fx-background-color: #008080;">
+               <children>
+                  <ImageView fitHeight="95.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/1e0c2049-b1bd-42b5-a023-fb4c9c27917c_200x200.png" />
+                     </image>
+                  </ImageView>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #008080;" stylesheets="@../../../JavaFXApplication1/src/keyhbfx-master/out/production/FXKeyhub/app/utils/fullpackstyling.css" text="Utilisateurs">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/community.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #008080;" stylesheets="@../../../JavaFXApplication1/src/keyhbfx-master/out/production/FXKeyhub/app/utils/fullpackstyling.css" text="Evénements">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_compass_24px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="47.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #008080;" stylesheets="@../../../JavaFXApplication1/src/keyhbfx-master/out/production/FXKeyhub/app/utils/fullpackstyling.css" text="Actualités">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_pie_chart_24px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="84.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #008080;" stylesheets="@../../../JavaFXApplication1/src/keyhbfx-master/out/production/FXKeyhub/app/utils/fullpackstyling.css" text="Offres">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_details_24px_3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #008080;" stylesheets="@../../../JavaFXApplication1/src/keyhbfx-master/out/production/FXKeyhub/app/utils/fullpackstyling.css" text="Formations">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/community.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #008080;" stylesheets="@../../../JavaFXApplication1/src/keyhbfx-master/out/production/FXKeyhub/app/utils/fullpackstyling.css" text="Crowdfunding">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_compass_24px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #008080;" text="Réclamation">
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8_settings_32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="123.0" layoutY="-4.0" prefHeight="95.0" prefWidth="1134.0" style="-fx-background-color: #008080;">
+               <children>
+                  <Label layoutX="296.0" layoutY="24.0" prefHeight="48.0" prefWidth="368.0" text="Espace Admin" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

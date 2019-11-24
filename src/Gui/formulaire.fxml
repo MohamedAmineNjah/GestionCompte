@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="361.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FormulaireController">
+   <children>
+      <ImageView fitHeight="387.0" fitWidth="754.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/received_545184012913512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="15.0" layoutY="14.0" text="Nom :" textFill="#070707">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="56.0" text="Prenom :" textFill="#070707">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="135.0" text="tel : " textFill="#0a0a0a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="268.0" text="diplome :" textFill="#0a0a0a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomtxt" layoutX="123.0" layoutY="11.0" />
+      <TextField fx:id="prenomtxt" layoutX="123.0" layoutY="53.0" />
+      <TextField fx:id="mailtxt" layoutX="123.0" layoutY="93.0" />
+      <TextField fx:id="teltxt" layoutX="123.0" layoutY="133.0" />
+      <TextField fx:id="sexetxt" layoutX="123.0" layoutY="171.0" />
+      <Button fx:id="envbtn" layoutX="408.0" layoutY="328.0" mnemonicParsing="false" onAction="#envbtn" prefHeight="25.0" prefWidth="94.0" text="ENVOYER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="365.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Documents/images.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="18.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mail :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="18.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sexe :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="13.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date_naissance :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="diplometxt" layoutX="123.0" layoutY="265.0" />
+      <Text layoutX="321.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Merci de remplir ce formulaire">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="31.0" fitWidth="33.0" layoutX="513.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/images_2.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="tfDate" layoutX="123.0" layoutY="218.0" />
+      <Button fx:id="retbtn" layoutX="26.0" layoutY="331.0" mnemonicParsing="false" onAction="#retbtn" prefHeight="25.0" prefWidth="71.0" text="Retour">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

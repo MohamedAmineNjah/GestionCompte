@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="899.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ModifierController_1">
+   <children>
+      <ImageView fx:id="img1" fitHeight="1200.0" fitWidth="900.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/74615506_545184019580178_8091578374025117696_n.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="TXTTABF" layoutX="14.0" layoutY="44.0" prefHeight="173.0" prefWidth="818.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="43.0" text="ID" />
+          <TableColumn fx:id="colnom" prefWidth="62.0" text="NOM" />
+            <TableColumn fx:id="collieu" prefWidth="75.0" text="LIEU" />
+            <TableColumn fx:id="COLDESCR" prefWidth="116.0" text="DESCRIPTION" />
+            <TableColumn fx:id="COLDATE" prefWidth="67.0" text="DATE" />
+            <TableColumn fx:id="COLPRIX" prefWidth="73.0" text="PRIX" />
+            <TableColumn fx:id="COLNBRPL" minWidth="0.0" prefWidth="160.0" text="NBR PLACES DISONIBLES" />
+            <TableColumn fx:id="colimg" prefWidth="244.0" text="IMAGE" />
+        </columns>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#f8f0f0" />
+               </light>
+            </Lighting>
+         </effect>
+      </TableView>
+      <Button fx:id="BTNAFFICHER" layoutX="57.0" layoutY="259.0" mnemonicParsing="false" text="AFFICHER" />
+      <Button fx:id="BTNMODIF" layoutX="140.0" layoutY="259.0" mnemonicParsing="false" text="MODIFIER" />
+      <Button fx:id="BTNSUPPRIMER" layoutX="233.0" layoutY="259.0" mnemonicParsing="false" text="SUPPRIMER" />
+      <Label layoutX="55.0" layoutY="376.0" textFill="#e41414" />
+      <TextField fx:id="nom" layoutX="159.0" layoutY="313.0" promptText="NOM.." />
+      <TextField fx:id="lieu" layoutX="159.0" layoutY="343.0" promptText="LIEU" />
+      <TextField fx:id="description" layoutX="159.0" layoutY="381.0" promptText="DESCRIPTION" />
+      <TextField fx:id="date" layoutX="159.0" layoutY="410.0" promptText="DATE" />
+      <TextField fx:id="prix" layoutX="159.0" layoutY="444.0" promptText="PRIX" />
+      <TextField fx:id="nbr_places" layoutX="159.0" layoutY="474.0" promptText="NBR PLACES" />
+      <Label fx:id="labelid" layoutX="397.0" layoutY="309.0" text="id" textFill="#e41f1f">
+         <font>
+            <Font size="1.0" />
+         </font></Label>
+      <TextField fx:id="id" disable="true" layoutX="431.0" layoutY="305.0" promptText="ID.." />
+   </children>
+</AnchorPane>

@@ -5,9 +5,11 @@
  */
 package gestioncompte;
 
+import Service.ReclamationService;
 import Service.UserService;
 import entite.Admin;
 import entite.Freelancer;
+import entite.Reclamation;
 import entite.Startup;
 import entite.User;
 import utile.DataSourcee;
@@ -31,24 +33,33 @@ public class GestionCompte {
         System.out.println(ds3);
         //singletenp bon pratique de dev permet d unifie  yejma3 les instance
 
-        User p = new Admin("njah", "789", "admin", "amine", "njah", "amine@esprit.tn", "jardinelmenzah", "image1");
-        UserService ps = new UserService();
-         ps.insert(p);
-        ps.readAll().forEach(e -> System.out.println(e));
-
-        p.setLogin("njjaahh");
-        p.setPassword("bn");
-        p.setNom("ali");
-        p.setPrenom("bnsalem");
-        p.setEmail("bn@esprit.tn");
-        p.setAdresse("jardinjardin");
-        p.setImage("image2");
-       // ps.readAll().forEach(e -> System.out.println(e));
-
-       // ps.update(p, 11);
-       // ps.delete(p, 11);
-         System.out.println(ps.readAll());
-
+//        User p = new Admin("njah", "789", "admin", "amine", "njah", "amine@esprit.tn", "jardinelmenzah", "image1");
+//        UserService ps = new UserService();
+//         ps.insert(p);
+//        ps.readAll().forEach(e -> System.out.println(e));
+//
+//        p.setLogin("njjaahh");
+//        p.setPassword("bn");
+//        p.setNom("ali");
+//        p.setPrenom("bnsalem");
+//        p.setEmail("bn@esprit.tn");
+//        p.setAdresse("jardinjardin");
+//        p.setImage("image2");
+        // ps.readAll().forEach(e -> System.out.println(e));
+        // ps.update(p, 11);
+        // ps.delete(p, 11);
+        //  System.out.println(ps.readAll());
+        Reclamation r = new Reclamation("payement", "ou est le payement", "50790899");
+        ReclamationService re = new ReclamationService();
+        //re.insertamine(r);
+        //re.readAllamine().forEach(e -> System.out.println(e));
+       // r.setSujet11("retard");
+       // r.setText11("vous etes en retard");
+       // r.setPhone11("53225996");
+        re.readAllamine().forEach(e -> System.out.println(e));
+       // re.updateamine(r,3);
+        re.readAllamine().forEach(e -> System.out.println(e));
+        // re.deleteamine(4);
     }
 
 }

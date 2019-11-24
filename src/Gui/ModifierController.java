@@ -16,12 +16,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -47,7 +51,9 @@ public class ModifierController implements Initializable {
 
     @FXML
     private Button txtbutton;
-
+    @FXML
+    private Button txtretour;
+ UserService ps = new UserService();
     /**
      * Initializes the controller class.
      */
@@ -55,7 +61,7 @@ public class ModifierController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
        
-        UserService ps = new UserService();
+       
 
         ArrayList<User> pers = (ArrayList<User>) ps.readAll();
         ObservableList<User> obs = FXCollections.observableArrayList(pers);
@@ -64,23 +70,40 @@ public class ModifierController implements Initializable {
         
         obs.clear();
 
-        txtbutton.setOnAction(e -> {
-            User p = new User(txtlogin.getText(), txtpassword.getText(), txtnom.getText(), txtprenom.getText(), txtemail.getText(), txtadresse.getText(), txtimage.getText());
+       
+        
+    }
+
+    @FXML
+    private void modifier(ActionEvent event) throws IOException {
+        
+        User p = new User(txtlogin.getText(), txtpassword.getText(), txtnom.getText(), txtprenom.getText(), txtemail.getText(), txtadresse.getText(), txtimage.getText());
           //  UserService ps = new UserService();
 
             ps.update(p,AfficherUserController.b);
             AlertDialog.display("Brovo", "modification reussite !");
 
-            Parent root;
-            try {
-                root = FXMLLoader.load(getClass().getResource("AfficherUser.fxml"));
-                txtbutton.getScene().setRoot(root);
+             Parent tableViewParent = FXMLLoader.load(getClass().getResource("AfficherUser.fxml"));
+            Scene tableViewScene = new Scene(tableViewParent);
 
-            } catch (IOException ex) {
-                Logger.getLogger(AjouterUserController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            //This line gets the Stage information
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        });
+            window.setScene(tableViewScene);
+            window.show();
+
+    }
+
+    @FXML
+    private void retour(ActionEvent event) throws IOException {
+         Parent tableViewParent = FXMLLoader.load(getClass().getResource("AfficherUser.fxml"));
+            Scene tableViewScene = new Scene(tableViewParent);
+
+            //This line gets the Stage information
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            window.setScene(tableViewScene);
+            window.show();
     }
 
 }

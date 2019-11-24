@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ParticiperrController">
+   <children>
+      <SplitPane dividerPositions="0.13114754098360656" layoutX="-2.0" layoutY="-1.0" prefHeight="467.0" prefWidth="713.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="223.0" prefWidth="98.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="TXTTABF" layoutX="9.0" layoutY="14.0" prefHeight="264.0" prefWidth="598.0">
+                    <columns>
+                      <TableColumn fx:id="colid" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="colnom" prefWidth="75.0" text="NOM" />
+                        <TableColumn fx:id="collieu" prefWidth="75.0" text="LIEU" />
+                        <TableColumn fx:id="COLDESCR" prefWidth="75.0" text="DESCRIPTION" />
+                        <TableColumn fx:id="COLDATE" prefWidth="75.0" text="DATE" />
+                        <TableColumn fx:id="COLPRIX" prefWidth="75.0" text="PRIX" />
+                        <TableColumn fx:id="COLNBRPL" prefWidth="75.0" text="NBR PLACES" />
+                        <TableColumn fx:id="colimg" prefWidth="75.0" text="IMAGE" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="participer" layoutX="203.0" layoutY="301.0" mnemonicParsing="false" onAction="#participer" prefHeight="41.0" prefWidth="127.0" text="PARTICPER">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="actualiser" layoutX="69.0" layoutY="301.0" mnemonicParsing="false" onAction="#actualiser" prefHeight="41.0" prefWidth="127.0" text="ACTUALISER">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ac" layoutX="366.0" layoutY="378.0" mnemonicParsing="false" onAction="#ac" prefHeight="41.0" prefWidth="224.0" text=" Consulter les places disponibles">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
